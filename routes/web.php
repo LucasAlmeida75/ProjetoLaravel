@@ -12,10 +12,4 @@ Route::get('/events/{id}', [EventController::class, 'show']);
 
 Route::post('/events', [EventController::class, 'store']);
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    /* Route::get('/', [EventController::class, 'index']); */
-})->name('welcome');
+Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');

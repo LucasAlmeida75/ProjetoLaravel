@@ -197,6 +197,16 @@
     margin-top: 30px;
   }
 
+  /* dashboard */
+  .dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .dashboard-events-container th {
+    width: 25%;
+  }
+
   /* footer */
   footer {
     text-align: center;

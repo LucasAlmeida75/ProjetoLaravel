@@ -63,4 +63,14 @@ class EventController extends Controller
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
+
+    public function dashboard() {
+
+        $user = auth()->user();
+
+        //$events = Event::where('user_id', $user->id)->get();
+        $events = $user->events; //Como nas models já está setado as constraints da pra pegar todos dessa forma direto
+
+        return view('events.dashboard', ['events' => $events]);
+    }
 }
