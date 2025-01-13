@@ -27,7 +27,7 @@
                         <td><a href="/events/{{ $event->id }}"></a> {{ $event->title }}</td>
                         <td>0</td>
                         <td>
-                            <a href="/events" class="btn btn-info edit-btn">
+                            <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn">
                                 <ion-icon name="create-outline"></ion-icon> Editar
                             </a>
                             <form action="/events/{{ $event->id }}" method="post">
